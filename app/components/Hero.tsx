@@ -53,7 +53,7 @@ export default function Hero() {
           <a href="#contact" className="btn-primary text-sm">
             Book My Free On-Site Estimate
           </a>
-          <a href="#portfolio" className="btn-outline text-sm">
+          <a href="/portfolio" className="btn-outline text-sm">
             See Our Work
           </a>
         </div>
