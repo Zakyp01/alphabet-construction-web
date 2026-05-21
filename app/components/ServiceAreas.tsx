@@ -1,8 +1,21 @@
+import Link from 'next/link'
+
 const cities = [
-  'San Jose', 'Santa Clara', 'Sunnyvale', 'Cupertino', 'Mountain View',
-  'Los Altos', 'Los Gatos', 'Campbell', 'Saratoga', 'Milpitas',
-  'Morgan Hill', 'Gilroy', 'Palo Alto', 'Redwood City', 'Menlo Park',
-  'Foster City', 'San Mateo', 'Burlingame', 'Los Altos Hills', 'Fremont',
+  { name: 'San Jose', slug: 'san-jose' },
+  { name: 'Santa Clara', slug: 'santa-clara' },
+  { name: 'Sunnyvale', slug: 'sunnyvale' },
+  { name: 'Cupertino', slug: 'cupertino' },
+  { name: 'Mountain View', slug: 'mountain-view' },
+  { name: 'Los Altos', slug: 'los-altos' },
+  { name: 'Los Gatos', slug: 'los-gatos' },
+  { name: 'Campbell', slug: 'campbell' },
+  { name: 'Saratoga', slug: 'saratoga' },
+  { name: 'Milpitas', slug: 'milpitas' },
+  { name: 'Morgan Hill', slug: 'morgan-hill' },
+  { name: 'Gilroy', slug: 'gilroy' },
+  { name: 'Palo Alto', slug: 'palo-alto' },
+  { name: 'Los Altos Hills', slug: 'los-altos-hills' },
+  { name: 'Fremont', slug: 'fremont' },
 ]
 
 export default function ServiceAreas() {
@@ -19,12 +32,13 @@ export default function ServiceAreas() {
 
         <div className="flex flex-wrap justify-center gap-3">
           {cities.map((city) => (
-            <span
-              key={city}
-              className="bg-white border border-gray-border text-charcoal font-body text-sm px-4 py-2 rounded-sm hover:border-amber hover:text-amber transition-colors duration-200 cursor-default"
+            <Link
+              key={city.slug}
+              href={`/kitchen-remodeling/${city.slug}`}
+              className="bg-white border border-gray-border text-charcoal font-body text-sm px-4 py-2 rounded-sm hover:border-amber hover:text-amber transition-colors duration-200"
             >
-              {city}
-            </span>
+              {city.name}
+            </Link>
           ))}
         </div>
 
