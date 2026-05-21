@@ -34,6 +34,7 @@ const localBusinessSchema = {
     "longitude": -121.9518
   },
   "areaServed": ["Campbell", "San Jose", "Sunnyvale", "Cupertino", "Santa Clara", "Los Gatos", "Saratoga", "Los Altos", "Mountain View", "Palo Alto", "Milpitas", "Morgan Hill", "Gilroy", "Los Altos Hills", "Fremont"],
+  "license": "CA CSLB #1074290",
   "priceRange": "$$",
   "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"],
   "sameAs": [

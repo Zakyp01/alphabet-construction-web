@@ -117,7 +117,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Alphabet Construction & Remodeling. All rights reserved.
           </p>
           <p className="text-white/30 text-xs">
-            CA CSLB Licensed & Insured · Campbell, CA
+            CA CSLB Lic. #1074290 · Licensed & Insured · Campbell, CA
           </p>
         </div>
       </div>

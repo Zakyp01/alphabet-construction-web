@@ -137,7 +137,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="font-heading font-bold text-charcoal">License & Insurance</h3>
                   </div>
-                  <p className="text-sm text-gray-mid leading-relaxed">CA CSLB Licensed and fully insured on every project. You can verify our license on the CSLB website.</p>
+                  <p className="text-sm text-gray-mid leading-relaxed">CA CSLB License #1074290. Fully insured on every project. Verify at www.cslb.ca.gov.</p>
                 </div>
 
                 {/* Service areas */}
