@@ -1,13 +1,31 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (videoRef.current) {
+        const scrollY = window.scrollY
+        videoRef.current.style.transform = `translateY(${scrollY * 0.4}px)`
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video background */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-[130%] object-cover -top-[15%]"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
         {/* Fallback image if video fails */}
