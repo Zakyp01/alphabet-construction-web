@@ -96,6 +96,12 @@ export default function Header() {
             About
           </Link>
           <Link
+            href="/blog"
+            className="text-white/80 hover:text-amber font-body text-sm font-medium transition-colors duration-200 tracking-wide"
+          >
+            Blog
+          </Link>
+          <Link
             href="/contact"
             className="text-white/80 hover:text-amber font-body text-sm font-medium transition-colors duration-200 tracking-wide"
           >
@@ -173,6 +179,7 @@ export default function Header() {
           {[
             { label: 'Portfolio', href: '/portfolio' },
             { label: 'About', href: '/about' },
+            { label: 'Blog', href: '/blog' },
             { label: 'Contact', href: '/contact' },
           ].map((link) => (
             <Link
