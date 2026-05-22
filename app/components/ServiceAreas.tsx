@@ -34,7 +34,7 @@ export default function ServiceAreas() {
           {cities.map((city) => (
             <Link
               key={city.slug}
-              href={`/kitchen-remodeling/${city.slug}`}
+              href={`/service-areas/${city.slug}`}
               className="bg-white border border-gray-border text-charcoal font-body text-sm px-4 py-2 rounded-sm hover:border-amber hover:text-amber transition-colors duration-200"
             >
               {city.name}

@@ -76,6 +76,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
+  const serviceAreaPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${BASE_URL}/service-areas/${city}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   const blogListPage: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/blog`,
@@ -92,5 +99,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...servicePages, ...locationPages, ...blogListPage, ...blogPostPages]
+  return [...staticPages, ...servicePages, ...locationPages, ...serviceAreaPages, ...blogListPage, ...blogPostPages]
 }
