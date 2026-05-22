@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-posts'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Remodeling Blog & Guides | Alphabet Construction and Remodeling',
@@ -28,6 +30,7 @@ const categoryColors: Record<string, string> = {
 export default function BlogPage() {
   return (
     <>
+      <Header />
       {/* Hero */}
       <section className="bg-charcoal pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -119,6 +122,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }

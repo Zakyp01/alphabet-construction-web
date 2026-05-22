@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { blogPosts } from '@/lib/blog-posts'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 
 const BASE_URL = 'https://alphabetconstruction.us'
 
@@ -72,13 +74,11 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <Header />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-
-      {/* Header spacer */}
-      <div className="bg-charcoal h-24" />
 
       <div className="bg-gray-soft min-h-screen py-14">
         <div className="max-w-7xl mx-auto px-6">
@@ -243,6 +243,7 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

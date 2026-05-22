@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials'
 import ServiceAreas from './components/ServiceAreas'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+import FadeInSection from './components/FadeInSection'
 
 export default function Home() {
   return (
@@ -15,13 +16,27 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TrustBar />
-        <Services />
-        <WhyUs />
-        <Process />
-        <Testimonials />
-        <ServiceAreas />
-        <ContactSection />
+        <FadeInSection direction="none">
+          <TrustBar />
+        </FadeInSection>
+        <FadeInSection>
+          <Services />
+        </FadeInSection>
+        <FadeInSection>
+          <WhyUs />
+        </FadeInSection>
+        <FadeInSection>
+          <Process />
+        </FadeInSection>
+        <FadeInSection>
+          <Testimonials />
+        </FadeInSection>
+        <FadeInSection>
+          <ServiceAreas />
+        </FadeInSection>
+        <FadeInSection>
+          <ContactSection />
+        </FadeInSection>
       </main>
       <Footer />
     </>
