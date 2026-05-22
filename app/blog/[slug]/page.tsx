@@ -75,12 +75,12 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <>
       <Header />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
 
-      <div className="bg-gray-soft min-h-screen py-14">
+      <div className="bg-gray-soft min-h-screen pt-28 pb-14">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
         <div className="max-w-7xl mx-auto px-6">
           <div className="lg:grid lg:grid-cols-[1fr_320px] lg:gap-12 items-start">
 
